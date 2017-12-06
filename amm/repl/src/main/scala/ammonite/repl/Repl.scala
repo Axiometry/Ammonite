@@ -25,7 +25,7 @@ class Repl(input: InputStream,
 
   val prompt = Ref("@ ")
 
-  val frontEnd = Ref[FrontEnd](AmmoniteFrontEnd(Filter.empty))
+  val frontEnd = Ref[FrontEnd](ammonite.repl.FrontEnd.JLineWindows)
 
   var lastException: Throwable = null
 
